@@ -9,6 +9,8 @@ const routes = require('./routes')
 const db = require('./config/db')
 const methodOverride = require('method-override')
 
+const TestMiddleware = require('./middlewares/TestMiddleware')
+
 db.connect()
 
 const app = express()
@@ -19,6 +21,8 @@ app.use(morgan('combined'))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(methodOverride('_method'))
+
+app.use(TestMiddleware)
 
 app.engine('.hbs', engine({
     extname: '.hbs',
