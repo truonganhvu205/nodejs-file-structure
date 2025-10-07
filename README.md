@@ -13,6 +13,7 @@ npm install method-override
 npm install dotenv --save
 npm install jsonwebtoken
 npm install bcrypt
+npm i cookie-parser
 
 npm i nodemon --save-dev
 npm i morgan --save-dev
