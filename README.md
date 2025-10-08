@@ -15,6 +15,7 @@ npm install jsonwebtoken
 npm install bcrypt
 npm i cookie-parser
 
+npm install typescript --save-dev
 npm i nodemon --save-dev
 npm i morgan --save-dev
 npm i sass --save-dev
