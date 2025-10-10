@@ -1,7 +1,7 @@
 const siteRouter = require('./site')
 
-function routes(app) {
+function setupRoutes(app) {
     app.use('/', siteRouter)
 }
 
-module.exports = routes
+module.exports = setupRoutes

@@ -6,6 +6,7 @@
 npm init
 
 npm i express
+npm i morgan --save
 npm i express-handlebars
 npm i mongoose
 npm i mongoose-slug-generator
@@ -15,10 +16,9 @@ npm install jsonwebtoken
 npm install bcrypt
 npm i cookie-parser
 
-npm install typescript --save-dev
 npm i nodemon --save-dev
-npm i morgan --save-dev
 npm i sass --save-dev
+npm install cross-env --save-dev
 
 npm install --save-dev --save-exact prettier
 npm install --save-dev lint-staged

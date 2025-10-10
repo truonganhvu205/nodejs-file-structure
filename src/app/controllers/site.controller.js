@@ -1,4 +1,4 @@
-const Test = require('../models/Test')
+const Test = require('../models/test.model')
 
 class SiteController {
     // GET /
