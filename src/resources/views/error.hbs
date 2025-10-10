@@ -1,1 +1,11 @@
-<h1>Error Page</h1>
+<div>
+    <h1>{{title}}</h1>
+
+    <div>
+        <p>{{message}}</p>
+
+        {{#if stack}}
+        <pre>{{stack}}</pre>
+        {{/if}}
+    </div>
+</div>

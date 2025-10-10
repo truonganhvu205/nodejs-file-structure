@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { MONGODB_URI } = require('../env')
+const {MONGODB_URI} = require('../env')
 
 async function connect(req, res, next) {
     if(!MONGODB_URI) {
@@ -21,4 +21,4 @@ async function connect(req, res, next) {
     }
 }
 
-module.exports = { connect }
+module.exports = {connect}

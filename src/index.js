@@ -3,7 +3,7 @@
 
 const app = require('./app')
 const db = require('./config/db')
-const { PORT } = require('./config/env')
+const {PORT} = require('./config/env')
 
 db.connect()
 app.listen(PORT)

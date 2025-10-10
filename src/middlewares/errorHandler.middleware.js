@@ -5,6 +5,7 @@ function errorHandler(err, req, res, next) {
     res.status(status).render('error', {
         title: `${status}`,
         message,
+        stack: err.stack,
     })
 }
 
