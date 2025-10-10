@@ -15,8 +15,7 @@
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --inspect src/index.js",
-    "start": "cross-env NODE_ENV=production nodemon --inspect src/index.js",
+    "start": "nodemon --inspect src/index.js",
     "watch": "sass --watch src/resources/sass:src/public/css"
   },
   "dependencies": {
