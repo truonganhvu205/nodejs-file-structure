@@ -3,7 +3,9 @@
 
 const app = require('./app')
 const db = require('./config/db')
-const {PORT} = require('./config/env')
+const {port} = require('./config/env')
 
 db.connect()
-app.listen(PORT)
+app.listen(port, () => {
+    console.log(`App listening on port ${port}`)
+})

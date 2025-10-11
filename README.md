@@ -18,7 +18,6 @@ npm i cookie-parser
 
 npm i nodemon --save-dev
 npm i sass --save-dev
-npm install cross-env --save-dev
 
 npm install --save-dev --save-exact prettier
 npm install --save-dev lint-staged

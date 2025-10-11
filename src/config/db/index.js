@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
-const {MONGODB_URI} = require('../env')
+const {mongoDbUri} = require('../../config/env')
 
-async function connect(req, res, next) {
-    if(!MONGODB_URI) {
+async function connect() {
+    if(!mongoDbUri) {
         console.error('MongoDB URI is not defined!')
         process.exit(1)
     }
 
     try{
-        await mongoose.connect(MONGODB_URI)
+        await mongoose.connect(mongoDbUri)
         console.log('Connected to MongoDB successfully!')
     } catch(err) {
         if (err instanceof Error) {
