@@ -5,18 +5,19 @@
 ```
 npm init
 
-npm i express
-npm i morgan --save
-npm i express-handlebars
-npm i mongoose
-npm i mongoose-slug-generator
+npm install express
+npm install morgan
+npm install express-handlebars
+npm install mongoose
+npm install mongoose-slug-generator --save
 npm install method-override
 npm install dotenv --save
+
 npm install jsonwebtoken
 npm install bcrypt
-npm i cookie-parser
+npm install cookie-parser
 
-npm i nodemon --save-dev
+npm install --save-dev nodemon
 npm i sass --save-dev
 
 npm install --save-dev --save-exact prettier

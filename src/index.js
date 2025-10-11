@@ -2,10 +2,10 @@
 // truonganhvu205@gmail.com
 
 const app = require('./app')
-const db = require('./config/db')
-const {port} = require('./config/env')
+const {appDb, appPort} = require('./config')
 
-db.connect()
-app.listen(port, () => {
-    console.log(`App listening on port ${port}`)
+appDb.connect()
+
+app.listen(appPort.port, () => {
+    console.log(`App listening on port ${appPort.port}`)
 })
