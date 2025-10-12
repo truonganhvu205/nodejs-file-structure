@@ -2,9 +2,9 @@ const express = require('express')
 const morgan = require('morgan')
 const { engine } = require('express-handlebars')
 const path = require('path')
-const setupRoutes = require('./routes')
+const setupRoutes = require('./app/routes')
 const methodOverride = require('method-override')
-const errorHandler = require('./middlewares/errorHandler.middleware')
+const errorHandler = require('./app/middlewares/errorHandler.middleware')
 
 const app = express()
 
