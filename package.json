@@ -16,7 +16,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --inspect src/index.js",
-    "watch": "sass --watch src/resources/sass:src/public/css"
+    "watch": "sass --watch src/resources/sass:public/css"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",

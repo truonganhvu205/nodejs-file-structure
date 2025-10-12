@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const {mongoDbUri} = require('../env')
+const {mongoDbUri} = require('./env')
 
 async function connect() {
     if(!mongoDbUri) {
