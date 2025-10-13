@@ -2,10 +2,13 @@
 // truonganhvu205@gmail.com
 
 const app = require('./app')
-const {appDb, appPort} = require('./config')
+const {connectMongoDb} = require('./app/database')
+const {serverPort} = require('./config')
 
-appDb.connect()
+;(async() => {
+    await connectMongoDb()
+})()
 
-app.listen(appPort.port, () => {
-    console.log(`App listening on port ${appPort.port}`)
+app.listen(serverPort, () => {
+    console.log(`App listening on port ${serverPort}`)
 })

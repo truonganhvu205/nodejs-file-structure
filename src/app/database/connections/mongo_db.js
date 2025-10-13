@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-const {mongoDbUri} = require('./env')
+const {mongoDbUri} = require('../../../config')
 
-async function connect() {
+async function connectMongoDb() {
     if(!mongoDbUri) {
         console.error('MongoDB URI is not defined!')
         process.exit(1)
@@ -21,4 +21,4 @@ async function connect() {
     }
 }
 
-module.exports = {connect}
+module.exports = connectMongoDb

@@ -1,7 +1,3 @@
-const {connect} = require('./database')
-const {port} = require('./env')
+const env = require('./env')
 
-module.exports = {
-    appPort: {port},
-    appDb: {connect},
-}
+module.exports = {...env}
