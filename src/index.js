@@ -6,9 +6,14 @@ const {connectMongoDb} = require('./app/database')
 const {serverPort} = require('./config')
 
 ;(async() => {
-    await connectMongoDb()
-})()
+    try{
+        await connectMongoDb()
 
-app.listen(serverPort, () => {
-    console.log(`App listening on port ${serverPort}`)
-})
+        app.listen(serverPort, () => {
+            console.log(`App listening on port ${serverPort}`)
+        })
+    } catch(err) {
+        console.error('Failed to start server:', err.message)
+        process.exit(1)
+    }
+})()
