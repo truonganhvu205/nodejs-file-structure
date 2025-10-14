@@ -1,11 +1,13 @@
+const {config} = require('../../../config')
+
 function errorHandler(err, req, res, next) {
     const statusCode = err.status || 500
-    const message = err.message || 'Internal Server Error'
+    const message = config.env === 'production' ? 'Internal Server Error' : err.message
 
     res.status(statusCode).render('error', {
         title: `${statusCode}`,
         message,
-        stack: err.stack,
+        ...(process.env.NODE_ENV !== 'production' && { stack: err.stack }),
     })
 }
 
