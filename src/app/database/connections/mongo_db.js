@@ -16,7 +16,6 @@ async function connectMongoDb() {
         } else {
             console.error('MongoDB connection failed:', err)
         }
-        
         process.exit(1)
     }
 }

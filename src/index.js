@@ -2,18 +2,22 @@
 // truonganhvu205@gmail.com
 
 const app = require('./app')
-const {connectMongoDb} = require('./app/database')
+const {connectMongoDb, connectPostgreDb} = require('./app/database')
 const {serverPort} = require('./config')
 
 ;(async() => {
     try{
-        await connectMongoDb()
-
-        app.listen(serverPort, () => {
-            console.log(`App listening on port ${serverPort}`)
-        })
+        await Promise.all([
+            connectMongoDb(),
+            connectPostgreDb,
+        ])
+        console.log('All databases connected successfully!')
     } catch(err) {
-        console.error('Failed to start server:', err.message)
+        console.error('Databases connection failed:', err.message)
         process.exit(1)
     }
 })()
+
+app.listen(serverPort, () => {
+    console.log(`App listening on port ${serverPort}`)
+})
