@@ -1,3 +1,3 @@
-const env = require('./env')
+const config = require('./env')
 
-module.exports = {...env}
+module.exports = {...config}

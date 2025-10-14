@@ -15,12 +15,14 @@
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --inspect src/index.js",
+    "dev": "nodemon",
+    "start": "cross-env NODE_ENV=production node src/index.js",
     "watch": "sass --watch src/resources/sass:public/css"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
+    "cross-env": "^10.1.0",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",

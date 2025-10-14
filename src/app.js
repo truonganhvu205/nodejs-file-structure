@@ -4,7 +4,7 @@ const { engine } = require('express-handlebars')
 const path = require('path')
 const setupRoutes = require('./app/routes')
 const methodOverride = require('method-override')
-const errorHandler = require('./app/middlewares/errorHandler.middleware')
+const {errorHandler, notFoundHandler} = require('./app/middlewares')
 
 const app = express()
 
@@ -21,6 +21,8 @@ app.set('views', path.join(__dirname, 'resources', 'views'))
 app.use(express.static('public'))
 
 setupRoutes(app)
+
+app.use(notFoundHandler)
 app.use(errorHandler)
 
 module.exports = app

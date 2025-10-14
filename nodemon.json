@@ -1,0 +1,7 @@
+{
+  "watch": ["src"],
+  "ext": "js,json",
+  "ignore": ["node_modules", "logs", "coverage"],
+  "exec": "cross-env NODE_ENV=development node --inspect src/index.js",
+  "delay": "300"
+}

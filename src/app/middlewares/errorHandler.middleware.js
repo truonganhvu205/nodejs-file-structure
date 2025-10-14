@@ -1,9 +1,9 @@
 function errorHandler(err, req, res, next) {
-    const status = err.status || 500
+    const statusCode = err.status || 500
     const message = err.message || 'Internal Server Error'
 
-    res.status(status).render('error', {
-        title: `${status}`,
+    res.status(statusCode).render('error', {
+        title: `${statusCode}`,
         message,
         stack: err.stack,
     })

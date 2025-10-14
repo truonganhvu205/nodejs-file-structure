@@ -3,7 +3,7 @@
 #### npm Packages
 
 ```
-npm init
+npm init -y
 
 npm install express
 npm install morgan
@@ -22,6 +22,8 @@ npm install cookie-parser
 
 npm install --save-dev nodemon
 npm i sass --save-dev
+
+npm install cross-env
 
 npm install --save-dev --save-exact prettier
 npm install --save-dev lint-staged
