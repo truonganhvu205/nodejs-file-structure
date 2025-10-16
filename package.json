@@ -15,6 +15,7 @@
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
+    "test": "cross-env NODE_ENV=test node src/index.js",
     "dev": "nodemon",
     "start": "cross-env NODE_ENV=production node src/index.js",
     "watch": "sass --watch src/resources/sass:public/css"
@@ -35,7 +36,7 @@
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.3",
+    "lint-staged": "^16.2.4",
     "nodemon": "^3.1.10",
     "prettier": "3.6.2",
     "sass": "^1.93.2"
@@ -47,5 +48,6 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "keywords": []
 }
