@@ -3,7 +3,10 @@ const path = require('path')
 
 const env = process.env.NODE_ENV || 'development'
 
+const defaultEnvFile = '.env'
 const envFile = `.env.${env}`
+
+dotenv.config({ path: path.resolve(process.cwd(), defaultEnvFile), override: false })
 dotenv.config({path: path.resolve(process.cwd(), envFile)})
 
 const envConfigs = {
