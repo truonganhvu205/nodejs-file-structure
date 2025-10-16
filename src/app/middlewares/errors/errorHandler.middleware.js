@@ -1,13 +1,16 @@
-const {config} = require('../../../configs')
+const {envConfigs} = require('../../../configs')
 
 function errorHandler(err, req, res, next) {
+    const isDev = envConfigs.isDev
     const statusCode = err.status || 500
-    const message = config.env === 'production' ? 'Internal Server Error' : err.message
+    const message = isDev ? err.message : 'Internal Server Error'
+    const stack = isDev ? err.stack : ''
 
-    res.status(statusCode).render('error', {
-        title: `${statusCode}`,
-        message,
-        ...(process.env.NODE_ENV !== 'production' && { stack: err.stack }),
+    res.status(statusCode).render('errors/error', {
+        title: `${statusCode}`, 
+        message, 
+        stack, 
+        isDev, 
     })
 }
 

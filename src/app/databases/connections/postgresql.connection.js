@@ -10,6 +10,7 @@ connectPostgreSql.connect()
   })
   .catch(err => {
     console.error('PostgreSQL connection failed:', err.message)
+    process.exit(1)
   })
 
 module.exports = connectPostgreSql

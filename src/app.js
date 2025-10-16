@@ -1,11 +1,11 @@
 const express = require('express')
 const morgan = require('morgan')
-const { engine } = require('express-handlebars')
+const {engine} = require('express-handlebars')
 const path = require('path')
 const setupRoutes = require('./app/routes')
 const methodOverride = require('method-override')
 // const {helpers} = require('./utils')
-const {errorHandler, notFoundHandler} = require('./app/middlewares')
+const {notFoundHandler, errorHandler} = require('./app/middlewares')
 const {connectMongoDb, connectPostgreSql} = require('./app/databases')
 
 const app = express()

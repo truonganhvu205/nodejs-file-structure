@@ -2,10 +2,11 @@
     <h1>{{title}}</h1>
 
     <div>
+        {{#if isDev}}
         <p>{{message}}</p>
-
-        {{!-- {{#if stack}}
         <pre>{{stack}}</pre>
-        {{/if}} --}}
+        {{else}}
+        <p>{{message}}</p>
+        {{/if}}
     </div>
 </div>
