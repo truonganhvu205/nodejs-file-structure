@@ -10,7 +10,6 @@ npm install morgan
 npm install express-handlebars
 
 npm install pg-promise
-<!-- npm install mongoose -->
 npm install mongoose@8.10.1
 npm install mongoose-slug-generator --save
 
