@@ -1,9 +1,9 @@
 const pgp = require('pg-promise')()
-const {postgreUri} = require('../../../config')
+const {postgreSqlUri} = require('../../../configs')
 
-const connectPostgreDb = pgp(postgreUri)
+const connectPostgreSql = pgp(postgreSqlUri)
 
-connectPostgreDb.connect()
+connectPostgreSql.connect()
   .then(obj => {
     console.log('Connected to PostgreSQL successfully!')
     obj.done()
@@ -12,4 +12,4 @@ connectPostgreDb.connect()
     console.error('PostgreSQL connection failed:', err.message)
   })
 
-module.exports = connectPostgreDb
+module.exports = connectPostgreSql

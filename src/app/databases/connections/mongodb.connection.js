@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const {mongoDbUri} = require('../../../config')
+const {mongoDbUri} = require('../../../configs')
 
 async function connectMongoDb() {
     if(!mongoDbUri) {
@@ -11,7 +11,7 @@ async function connectMongoDb() {
         await mongoose.connect(mongoDbUri)
         console.log('Connected to MongoDB successfully!')
     } catch(err) {
-        if (err instanceof Error) {
+        if(err instanceof Error) {
             console.error('MongoDB connection failed:', err.message)
         } else {
             console.error('MongoDB connection failed:', err)
