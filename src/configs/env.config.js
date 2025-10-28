@@ -12,8 +12,9 @@ dotenv.config({path: path.resolve(process.cwd(), envFile)})
 const envConfigs = {
     env,
     serverPort: process.env.PORT || 3000,
-    mongoDbUri: process.env.MONGODB_URI || '',
     postgreSqlUri: process.env.POSTGRESQL_URI || '',
+    mongoDbUri: process.env.MONGODB_URI || '',
+    redisUri: process.env.REDIS_URI || '',
     isDev: env === 'development',
     isProd: env === 'production',
 }

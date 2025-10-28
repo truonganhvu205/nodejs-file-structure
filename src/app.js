@@ -6,15 +6,16 @@ const setupRoutes = require('./app/routes')
 const methodOverride = require('method-override')
 // const {helpers} = require('./utils')
 const {notFoundHandler, errorHandler} = require('./app/middlewares')
-const {connectMongoDb, connectPostgreSql} = require('./app/databases')
+const {connectPostgreSql, connectMongoDb, connectRedis} = require('./app/databases')
 
 const app = express()
 
 async function connectDatabases() {
     try{
         await Promise.all([
-            connectMongoDb(),
             connectPostgreSql,
+            connectMongoDb(),
+            connectRedis(),
         ])
         console.log('All databases connected successfully!')
     } catch(err) {
@@ -29,8 +30,8 @@ app.use(express.json())
 app.use(methodOverride('_method'))
 
 app.engine('.hbs', engine({
-    extname: '.hbs', 
-    // helpers, 
+    extname: '.hbs',
+    // helpers,
 }))
 app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'resources', 'views'))

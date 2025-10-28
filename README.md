@@ -12,6 +12,7 @@ npm install express-handlebars
 npm install pg-promise
 npm install mongoose@8.10.1
 npm install mongoose-slug-generator --save
+npm install redis
 
 npm install method-override
 npm install dotenv --save
@@ -34,8 +35,10 @@ npm install husky --save-dev
 
 ```
 "scripts": {
-    "start": "nodemon --inspect src/index.js",
-    "watch": "sass src/resources/scss:src/public/css --watch",
+    "test": "cross-env NODE_ENV=test node src/index.js",
+    "dev": "nodemon",
+    "start": "cross-env NODE_ENV=production node src/index.js",
+    "watch": "sass --watch src/resources/sass:public/css"
 },
 "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --write --single-quote --trailing-comma all --tab-width 4"

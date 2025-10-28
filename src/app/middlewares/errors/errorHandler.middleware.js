@@ -7,10 +7,10 @@ function errorHandler(err, req, res, next) {
     const stack = isDev ? err.stack : ''
 
     res.status(statusCode).render('errors/error', {
-        title: `${statusCode}`, 
-        message, 
-        stack, 
-        isDev, 
+        title: `${statusCode}`,
+        message,
+        stack,
+        isDev,
     })
 }
 

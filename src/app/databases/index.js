@@ -1,5 +1,5 @@
 const dbConnection = require('./connections')
 
 module.exports = {
-    ...dbConnection, 
+    ...dbConnection,
 }
