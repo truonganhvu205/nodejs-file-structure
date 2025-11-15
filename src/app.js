@@ -4,7 +4,6 @@ const {engine} = require('express-handlebars')
 const path = require('path')
 const setupRoutes = require('./app/routes')
 const methodOverride = require('method-override')
-// const {helpers} = require('./utils')
 const {notFoundHandler, errorHandler} = require('./app/middlewares')
 const {connectPostgreSql, connectMongoDb, connectRedis} = require('./app/databases')
 
@@ -31,7 +30,6 @@ app.use(methodOverride('_method'))
 
 app.engine('.hbs', engine({
     extname: '.hbs',
-    // helpers,
 }))
 app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'resources', 'views'))
