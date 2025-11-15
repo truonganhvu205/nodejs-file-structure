@@ -1,4 +1,4 @@
-const siteController = require('./site.controllers')
+const siteController = require('./site.controller')
 
 module.exports = {
     siteController,

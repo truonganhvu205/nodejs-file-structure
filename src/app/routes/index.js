@@ -1,4 +1,4 @@
-const siteRouter = require('./site.routes')
+const siteRouter = require('./site.route')
 
 function setupRoutes(app) {
     app.use('/', siteRouter)
