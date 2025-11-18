@@ -11,13 +11,17 @@
 </head>
 <body>
     <div class="app">
-        {{>header}}
+        {{#if showHeader}}
+            {{> header}}
+        {{/if}}
 
         <div class="container">
             {{{body}}}
         </div>
 
-        {{>footer}}
+        {{#if showFooter}}
+            {{> footer}}
+        {{/if}}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

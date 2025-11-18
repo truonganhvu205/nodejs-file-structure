@@ -1,6 +1,5 @@
 const {redisUri} = require('../../../configs')
 const redis = require('redis')
-
 let client
 
 async function connectRedis() {

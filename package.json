@@ -15,10 +15,11 @@
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
+    "clean": "rimraf dist",
     "test": "cross-env NODE_ENV=test node src/index.js",
     "dev": "nodemon",
     "start": "cross-env NODE_ENV=production node src/index.js",
-    "watch": "sass --watch src/resources/sass:public/css"
+    "watch:sass": "sass --watch src/resources/sass:public/css"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -51,7 +52,7 @@
     "typescript": "^5.9.3"
   },
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --write --single-quote --trailing-comma all --tab-width 4"
+    "src/**/*.{js,ts,json,scss}": "prettier --write --single-quote --trailing-comma all --tab-width 4"
   },
   "husky": {
     "hooks": {

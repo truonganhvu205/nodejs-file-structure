@@ -6,7 +6,7 @@ function errorHandler(err, req, res, next) {
     const message = isDev ? err.message : 'Internal Server Error'
     const stack = isDev ? err.stack : ''
 
-    res.status(statusCode).render('errors/error', {
+    res.status(statusCode).render('errors/500', {
         title: `${statusCode}`,
         message,
         stack,

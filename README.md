@@ -1,9 +1,6 @@
 #### Description
 
 
-#### Options (only for FE)
-- [React Icons](https://react-icons.github.io/react-icons/)
-
 #### npm Packages
 
 ```
@@ -39,23 +36,4 @@ npm install cross-env
 npm install --save-dev --save-exact prettier
 npm install --save-dev lint-staged
 npm install husky --save-dev
-```
-
-#### package.json
-
-```
-"scripts": {
-    "test": "cross-env NODE_ENV=test node src/index.js",
-    "dev": "nodemon",
-    "start": "cross-env NODE_ENV=production node src/index.js",
-    "watch": "sass --watch src/resources/sass:public/css"
-},
-"lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --write --single-quote --trailing-comma all --tab-width 4"
-},
-"husky": {
-    "hooks": {
-        "pre-commit": "lint-staged"
-    }
-},
 ```
