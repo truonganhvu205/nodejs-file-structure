@@ -42,6 +42,9 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
 
+    "removeComments": true,
+    "noEmitOnError": true,
+
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
 
