@@ -1,17 +1,16 @@
 const {redisUri} = require('../../../configs')
 const redis = require('redis')
+
 let client
 
 async function connectRedis() {
   if (!redisUri) {
-    console.error('Redis URL is not defined!')
+    console.error('Redis URI is undefined!')
     process.exit(1)
   }
 
   try {
-    client = redis.createClient({
-      url: redisUri,
-    })
+    client = redis.createClient({url: redisUri})
 
     client.on('error', (err) => {
       console.error('Redis connection error:', err);
@@ -23,11 +22,14 @@ async function connectRedis() {
 
     await client.connect()
     return client
-
   } catch (err) {
-    console.error('Failed to connect to Redis:', err.message || err);
+    if(err instanceof Error) {
+        console.error('Redis connection failed:', err.message)
+    } else {
+        console.error('Redis connection failed:', err)
+    }
     process.exit(1)
   }
 }
 
-module.exports = { connectRedis, client }
+module.exports = {connectRedis, client}

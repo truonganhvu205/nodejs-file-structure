@@ -18,7 +18,11 @@ async function connectDatabases() {
         ])
         console.log('All databases connected successfully!')
     } catch(err) {
-        console.error('Databases connection failed:', err.message)
+        if(err instanceof Error) {
+            console.error('Databases connection failed:', err.message)
+        } else {
+            console.error('Databases connection failed:', err)
+        }
         process.exit(1)
     }
 }

@@ -15,7 +15,6 @@
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
-    "clean": "rimraf dist",
     "test": "cross-env NODE_ENV=test node src/index.js",
     "dev": "nodemon",
     "start": "cross-env NODE_ENV=production node src/index.js",
@@ -34,7 +33,7 @@
     "mongoose-slug-generator": "^1.0.4",
     "morgan": "^1.10.1",
     "pg-promise": "^12.3.0",
-    "redis": "^5.9.0"
+    "redis": "^5.10.0"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
@@ -43,10 +42,10 @@
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.10.1",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
+    "lint-staged": "^16.2.7",
     "nodemon": "^3.1.11",
     "prettier": "3.6.2",
-    "sass": "^1.94.1",
+    "sass": "^1.94.2",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"

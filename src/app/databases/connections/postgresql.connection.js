@@ -9,7 +9,11 @@ connectPostgreSql.connect()
     obj.done()
   })
   .catch(err => {
-    console.error('PostgreSQL connection failed:', err.message)
+    if(err instanceof Error) {
+        console.error('PostgreSQL connection failed:', err.message)
+    } else {
+        console.error('PostgreSQL connection failed:', err)
+    }
     process.exit(1)
   })
 

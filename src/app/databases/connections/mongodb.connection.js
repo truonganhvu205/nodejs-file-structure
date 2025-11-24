@@ -3,7 +3,7 @@ const {mongoDbUri} = require('../../../configs')
 
 async function connectMongoDb() {
     if(!mongoDbUri) {
-        console.error('MongoDB URI is not defined!')
+        console.error('MongoDB URI is undefined!')
         process.exit(1)
     }
 

@@ -3,7 +3,6 @@ const slug = require('mongoose-slug-generator')
 const Schema = mongoose.Schema
 
 mongoose.plugin(slug)
-
 const Test = new Schema({
     name: {type: String,},
     description: {type: String,},
