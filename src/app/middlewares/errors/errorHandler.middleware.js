@@ -11,6 +11,8 @@ function errorHandler(err, req, res, next) {
         message,
         stack,
         isDev,
+        showHeader: false,
+        showFooter: false,
     })
 }
 
